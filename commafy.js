@@ -17,7 +17,7 @@
             continue;
         };
         uniques[matches[i]] = 1;
-        regex = new RegExp(matches[i], 'g');
+        regex = new RegExp("\\b" + matches[i] + "\\b", 'g');
         text = text.replace(regex, commafy(matches[i]));
     };
     document.body.innerHTML = text;
